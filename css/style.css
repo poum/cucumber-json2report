@@ -1,0 +1,249 @@
+body {
+	align: center;
+	background: url("../images/gradient_bg.png") repeat-y;
+}
+
+#menus {
+	background-color: black;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+#logo {
+	color: green;
+	text-decoration: none;
+}	
+
+#project {
+	background: url("../images/logo.png") no-repeat;
+	font-size: 40px;
+	padding-left: 70px;
+	padding-bottom: 20px;
+}
+
+#build {
+	font-size: 20px;
+	text-align: right;
+	padding-left: 90px;
+	padding-top: -20px;
+}
+
+#content { 
+	width: 960px;
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1, h2 {
+	font-size: 28px;
+	letter-spacing: -0.05em;
+}
+
+#pageTitle {
+	margin-top: 40px;
+}
+
+#pageTitle, #graph, #grid, #listing, #listingTitle, #gridTitle {
+	margin-bottom: 30px;
+}
+
+#graph {
+	padding-bottom: 30
+	border-bottom: 1px solid lightgrey;
+}
+
+#feature {
+	padding: 5px;
+	padding-bottom: 20px;
+}
+
+#featureKeyword, #elements span.keyword {
+	font-weight: bold;	
+}
+
+#elements > li > p > span.keyword:after {
+	content: ': ';
+}
+
+.steps span.keyword:after {
+	content: ' ';
+}
+
+.stepKeyword, .keyword, #featureKeyword {
+	padding-left: 20px;
+}
+
+.error_message {
+	padding: 25px;
+	background-color: #FFEEEE;
+	border: 2px groove #D88A8A;
+}
+
+.comments {
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-left: 20px;
+	font-style: italic;
+	/* background-image: url("../images/icons/comment.png") no-repeat; */
+	background: lightgrey url("../images/icons/comment.png") no-repeat;
+}
+
+.duration {
+	float: right;
+	font-weight: bold;
+}
+
+.embeddings {
+	/* padding-left: 18px; */
+	margin-right: 60px;
+	float: right;
+	/* font-size: 12px; */
+}
+
+.stepDuration {
+	margin-right: 20px;
+	font-weight: normal;
+}
+
+div.description {
+	background-color: beige;
+	width: 100%;
+	padding: 5px;
+	font-style: italic;
+}
+
+#tags li, .tags li {
+	color: blue;
+	float: left;
+}
+
+#tags li:before, .tags li:before {
+	content: ', ';
+}
+
+#tags li:first-child, .tags li:first-child {
+	padding-left: 20px;
+}
+
+#tags li:first-child:before, .tags li:first-child:before {
+	content: '' !important;
+}
+
+ul#elements {
+	padding-left: 5px;
+	padding-top: 5px;
+}
+
+ul#elements > li {
+	margin-top: 20px;
+}
+
+ul#elements li p, #featureTitle {
+	padding-left: 2px;
+	padding-bottom: 4px;
+	padding-top: 2px;
+	clear: both;
+}
+
+ul.steps {
+	padding-left: 20px;
+}
+
+.passed {
+	background-color: #93AD09;
+}
+
+.row_passed {
+	background-color: #C5D88A; 
+}
+
+.step_passed, .scenario_passed, .feature_passed {
+	background: url("../images/icons/tick.png") no-repeat;
+	padding-left: -20px;
+}
+
+.window_passed {
+	background: url("../images/icons/tick.png") no-repeat;
+}
+
+.pending {
+	background-color: #FD8708;
+}
+
+.row_pending {
+	background-color: #EBCC81;
+}
+
+.step_pending {
+	background: url("../images/icons/error.png") no-repeat;
+	padding-left: -20px;
+}
+
+.window_pending {
+	background: url("../images/icons/error.png") no-repeat;
+}
+
+.skipped {
+	background-color: #105EA5;
+	color: white;
+}
+
+.row_skipped {
+	background-color: #2DEAEC;
+}
+
+.step_skipped {
+	background: url("../images/icons/control_pause_blue.png") no-repeat;
+	padding-left: -20px;
+}
+
+.window_skipped {
+	background: url("../images/icons/control_pause_blue.png") no-repeat;
+}
+
+.failed {
+	background-color: #A5101F;
+	color: white;
+}
+
+.row_failed {
+	background-color: #D88A8A;
+}
+
+.step_failed, .scenario_failed, .feature_failed {
+	background: url("../images/icons/exclamation.png") no-repeat;
+	padding-left: -20px;
+}
+
+.window_failed {
+	background: url("../images/icons/exclamation.png") no-repeat;
+}
+
+.allFeatures, .allTags {
+	background: url("../images/icons/arrow_refresh.png") no-repeat;
+}
+
+.saveCharts {
+	background: url("../images/icons/picture_save.png") no-repeat;
+}
+
+.viewEmbeddingBtn {
+	background: url("../images/icons/picture.png") no-repeat;
+}
+
+.x-grid-row .x-grid-cell {
+	background-color: transparent;
+}
+
+.x-grid-row-summary {
+	background-color: lightgrey;
+}
+
+.x-grid-row-summary .x-grid-cell-inner {
+	font-weight: bold;
+}
+	
