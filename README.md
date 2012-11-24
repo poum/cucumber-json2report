@@ -61,7 +61,7 @@ cucumber-json2report use, in this order of decreasing precedence:
 By example, using: file:///somepath/cucumber-json2report/index.html?lang=fr&src=data/cucumber.json&project=MyProject&build=42
 a feature overwiew screen will be pretty quickly displayed:
 
-![feature overview](/docs/images/features-overview.png "Feature overview")
+![feature overview](https://github.com/masterthought/cucumber-reporting/raw/master/docs/images/features-overview.png "Feature overview")
 
 Notice how the build and project parameters modify the page title, the page header and title in the document.
 Thanks to default values, file:///somepath/cucumber-json2report/index.html will display the same information,
@@ -70,7 +70,7 @@ without project and build reference.
 If you're french, you could use `lang=fr` (or `lang=fr_FR` or nothing at all because your browser is probably already
 configured to display french by default):
 
-![feature overview](/docs/images/features-i18n-overview.png "Localized feature overview")
+![feature overview](https://github.com/masterthought/cucumber-reporting/raw/master/docs/images/features-i18n-overview.png "Localized feature overview")
 
 When the mouse is over a chart, additionnal information are displayed.
 
@@ -82,15 +82,15 @@ You can mask/retore/sort/reorder columns in the grid.
 If you click on a row, you access to the corresponding result listing and the charts will
 focus on this specific data.
 
-![feature overview](/docs/images/a-feature.png "Focus on a particular feature")
+![feature overview](https://github.com/masterthought/cucumber-reporting/raw/master/docs/images/a-feature.png "Focus on a particular feature")
 
 Below, you'll find the corresponding listing with (eventually) tags and comments.
 
-![feature overview](/docs/images/feature-details.png "Feature listing")
+![feature overview](https://github.com/masterthought/cucumber-reporting/raw/master/docs/images/feature-details.png "Feature listing")
 
 If screenshots were recorded while, testing, buttons indicating their number will be added:
 
-![feature overview](/docs/images/feature-with-embeddings.png "Feature listing")
+![feature overview](https://github.com/masterthought/cucumber-reporting/raw/master/docs/images/feature-with-embeddings.png "Feature listing")
 
 Click again on this row or on the grid 'restore' button to get all data back and mask the listing.
 If you click on the button above the 'display all features again' one, you can mask/unmask the grid panel.
@@ -112,8 +112,8 @@ Compatibility
 
 For now, cucumber-json2report was successfully tested only on Firefox/Linux.
 
-             Linux 32        Linux 64    Windows XP    Windows Vista   Windows 7   Windows 8
-	     (Ubuntu 12.04)
+OS             Linux 32        Linux 64    Windows XP    Windows Vista   Windows 7   Windows 8
+flavour     (Ubuntu 12.04)
 Firefox  15     ok
 	 16     ok
 	 17     ok
@@ -182,11 +182,11 @@ Bugs ?
 
 If you think you have detected a bug:
 
-	1. check if it's not a feature !
-	2. post an issue with:
-		* the incriminated cucumber json file 
-		* the reproduction process
-		* your configuration (extjs, browser, OS, lang)
+1. check if it's not a feature !
+2. post an issue with:
+  * the incriminated cucumber json file 
+  * the reproduction process
+  * your configuration (extjs, browser, OS, lang)
 
 Fell free to propose a fix ;-)
 
@@ -203,8 +203,8 @@ You're welcome to propose any other localization.
 Credits & links
 ---------------
 
-	* for the excellent cucumber-jvm
-	* cucumber-reporting & thucydides for the inspiration
+* the excellent cucumber-jvm
+* cucumber-reporting & thucydides for the inspiration
 
 Contact
 -------
