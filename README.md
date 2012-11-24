@@ -10,37 +10,37 @@ This report are localized, according to your browser preferences or as specified
 For the impatients
 ------------------
 
-	1. get sencha extjs 4.1.1a on www.sencha.com (dual LGPL and commercial license)
-	2. extract it and link it as extjs in the js directory
-	2. get cucumber-json2report 
-	3. put your json cucumber report in data sub directory (supposing it's name is `cucumber.json`)
-	4. open in your browser (only firefox for the moment) the index.html file with this url: file:///path/to/cucmber-json2report/index.html?src=data/cucumber.json
-	5. play around and enjoy
+1. get sencha extjs 4.1.1a on www.sencha.com (dual LGPL and commercial license)
+2. extract it and link it as extjs in the js directory
+3. get cucumber-json2report 
+4. put your json cucumber report in data sub directory (supposing it's name is `cucumber.json`)
+5. open in your browser (only firefox for the moment) the index.html file with this url: file:///path/to/cucmber-json2report/index.html?src=data/cucumber.json
+6. play around and enjoy
 
 Notice: works only with Firefox for the moment, due probably to more restrictive security policy (XHR).
 
 Copyright
 ---------
 
-    Copyright 2012 Philippe Poumaroux
+Copyright 2012 Philippe Poumaroux
 
 License
 -------
 
-    This file is part of cucumber-json2report.
+This file is part of cucumber-json2report.
 
-    cucumber-json2report is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+cucumber-json2report is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Documentation
 -------------
@@ -61,7 +61,7 @@ cucumber-json2report use, in this order of decreasing precedence:
 By example, using: file:///somepath/cucumber-json2report/index.html?lang=fr&src=data/cucumber.json&project=MyProject&build=42
 a feature overwiew screen will be pretty quickly displayed:
 
-	![feature overview](/docs/images/features-overview.png "Feature overview")
+![feature overview](/docs/images/features-overview.png "Feature overview")
 
 Notice how the build and project parameters modify the page title, the page header and title in the document.
 Thanks to default values, file:///somepath/cucumber-json2report/index.html will display the same information,
@@ -70,7 +70,7 @@ without project and build reference.
 If you're french, you could use `lang=fr` (or `lang=fr_FR` or nothing at all because your browser is probably already
 configured to display french by default):
 
-	![feature overview](/docs/images/features-i18n-overview.png "Localized feature overview")
+![feature overview](/docs/images/features-i18n-overview.png "Localized feature overview")
 
 When the mouse is over a chart, additionnal information are displayed.
 
@@ -82,15 +82,15 @@ You can mask/retore/sort/reorder columns in the grid.
 If you click on a row, you access to the corresponding result listing and the charts will
 focus on this specific data.
 
-	![feature overview](/docs/images/a-feature.png "Focus on a particular feature")
+![feature overview](/docs/images/a-feature.png "Focus on a particular feature")
 
 Below, you'll find the corresponding listing with (eventually) tags and comments.
 
-	![feature overview](/docs/images/feature-details.png "Feature listing")
+![feature overview](/docs/images/feature-details.png "Feature listing")
 
 If screenshots were recorded while, testing, buttons indicating their number will be added:
 
-	![feature overview](/docs/images/feature-with-embeddings.png "Feature listing")
+![feature overview](/docs/images/feature-with-embeddings.png "Feature listing")
 
 Click again on this row or on the grid 'restore' button to get all data back and mask the listing.
 If you click on the button above the 'display all features again' one, you can mask/unmask the grid panel.
