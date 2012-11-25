@@ -7,14 +7,14 @@ This report are localized, according to your browser preferences or as specified
 
 ## For the impatients
 
-1. get sencha extjs 4.1.1a on http://www.sencha.com/products/extjs/download/ (dual LGPL and commercial license)
-2. extract it and link it as extjs in the js directory
-3. get cucumber-json2report 
-4. put your json cucumber report in data sub directory (supposing it's name is `cucumber.json`)
-5. open in your browser (only firefox for the moment) the `index.html` file with this url: file:///path/to/cucmber-json2report/index.html?src=data/cucumber.json
+1. get cucumber-json2report 
+2. get sencha extjs 4.1.1a on http://www.sencha.com/products/extjs/download/ (dual LGPL and commercial license)
+3. extract it and link it as `extjs` in the `js` sub directory
+4. put your json cucumber report in `data` sub directory (supposing it's name is `cucumber.json`)
+5. open in your browser (only firefox for the moment) the `index.html` file with this url: file:///path/to/cucumber-json2report/index.html
 6. play around and enjoy
 
-Notice: works only with Firefox for the moment, due probably to more restrictive security policy (XHR).
+Notice: works only with Firefox for the moment, due probably to more restrictive security policy in other browser (XHR).
 
 ## Copyright
 
