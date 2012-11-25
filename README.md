@@ -1,14 +1,11 @@
-cucumber-json2report
-====================
+# cucumber-json2report
 
-Introduction
-------------
+## Introduction
 
-cucumber-json2report produces dynamically and locally graphical reports for your cucumber-jvm tests.
+cucumber-json2report produces dynamically and locally graphical reports for your [cucumber-jvm](https://github.com/cucumber/cucumber-jvm) tests.
 This report are localized, according to your browser preferences or as specified with the `lang` parameter.
 
-For the impatients
-------------------
+## For the impatients
 
 1. get sencha extjs 4.1.1a on http://www.sencha.com/products/extjs/download/ (dual LGPL and commercial license)
 2. extract it and link it as extjs in the js directory
@@ -19,13 +16,11 @@ For the impatients
 
 Notice: works only with Firefox for the moment, due probably to more restrictive security policy (XHR).
 
-Copyright
----------
+## Copyright
 
 Copyright 2012 Philippe Poumaroux
 
-License
--------
+## License
 
 This file is part of cucumber-json2report.
 
@@ -42,8 +37,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Documentation
--------------
+## Documentation
+
+### Configuration
 
 cucumber-json2report use, in this order of decreasing precedence:
 
@@ -57,6 +53,8 @@ cucumber-json2report use, in this order of decreasing precedence:
 * default values
 	* `src`: `data/cucumber.json`
 	* `lang`: the browser default one or `en`
+
+### Overview
 
 By example, using: `file:///somepath/cucumber-json2report/index.html?lang=fr&src=data/cucumber.json&project=MyProject&build=42`
 a feature overwiew screen will be pretty quickly displayed:
@@ -81,6 +79,8 @@ If you click on the button above the 'save image' one, you can mask/unmask the c
 You can mask/retore/sort/reorder columns in the grid.
 If you click on a row, you access to the corresponding result listing and the charts will
 focus on this specific data.
+Click again on this row or on the grid 'restore' button to get all data back and mask the listing.
+If you click on the button above the 'display all features again' one, you can mask/unmask the grid panel.
 
 ![feature overview](https://github.com/poum/cucumber-json2report/raw/master/docs/images/a-feature.png "Focus on a particular feature")
 
@@ -88,34 +88,30 @@ Below, you'll find the corresponding listing with (eventually) tags and comments
 
 ![feature overview](https://github.com/poum/cucumber-json2report/raw/master/docs/images/feature-details.png "Feature listing")
 
-If screenshots were recorded while, testing, buttons indicating their number will be added:
+If screenshots were recorded while testing, buttons indicating their number will be added:
 
 ![feature overview](https://github.com/poum/cucumber-json2report/raw/master/docs/images/feature-with-embeddings.png "Feature listing")
-
-Click again on this row or on the grid 'restore' button to get all data back and mask the listing.
-If you click on the button above the 'display all features again' one, you can mask/unmask the grid panel.
 
 You can access to screenshots (if any) by clicking on the 'image' buttons. The number displayed is
 the number of screenshots available for a speficic step.
 In the popup window, you can browse in all the scenario screenshots.
 
-Features
---------
+### Features
 
 * fully localization (english and french for now, help needed for adding others)
 * dynamic status charts for scenarios and steps, for all features or for a single one
 * pretty feature result listing with status, duration, and comments for features, scenarios, and steps; tags for features and scenarios
 * screenshot navigator
 
-Compatibility
--------------
+### Compatibility
 
 For now, cucumber-json2report was successfully tested only on Firefox (Linux Ubuntu 12.04 32bits & Windows Seven Pro).
 
 Feel free to send feedback for other configurations.
 
-Design
-------
+## Development information
+
+### Design
 
 After I've discovered the excellent cucumber-jvm used in conjonction with Selenium WebDriver,
 I've looked for a way to export the results, especially for the stake holders who are intended
@@ -158,20 +154,18 @@ adapt it to your taste or to your organization graphic chart.
 
 I've started to work on it at the beginning of november 2012.
 
-
-Todo
-----
+### Todo
 
 See the TODO file in this distribution.
 Propose your own !
 
 The next improvement will be:
-- a tag page as the cucmber-reporting one (almost finished)
-- a config file
-- compatibility with other major browsers
+* a screenshot browser window
+* a tag page as the cucmber-reporting one (almost finished)
+* a config file
+* compatibility with other major browsers
 
-Bugs ?
-------
+### Bugs ?
 
 If you think you have detected a bug:
 
@@ -181,10 +175,9 @@ If you think you have detected a bug:
   * the reproduction process
   * your configuration (extjs, browser, OS, lang)
 
-Fell free to propose a fix ;-)
+Feel free to propose a fix ;-)
 
-Help wanted
------------
+### Help wanted
 
 As you have certainly noticed, I'm not an english native speaker. Feel free to suggest any improvement
 for this documentation and the locale/default.js (aka en.js) file.
@@ -193,8 +186,7 @@ Mein Deutsch ist schrecklich, ich habe nicht locale/de.js schreiben versuchen.
 
 You're welcome to propose any other localization.
 
-Credits & links
----------------
+## Credits & links
 
 * aslak hellesoy for the excellent cucumber-jvm (please, fix the JSON output, I need results in every step)
   https://github.com/cucumber/cucumber-jvm
@@ -207,14 +199,12 @@ Credits & links
 * Douglas Crockford for his Javascript book and JSLint
   https://github.com/douglascrockford/JSLint
 
-Contact
--------
+## Contact
 
 poum `<at>` cpan.org
 
 See also by blog (in french) at http://philippe.poumaroux.free.fr
 
-Need a pause ?
---------------
+## Need a pause ?
 
-See http://www.teamsaw.eu
+See [the french Teamsaw site](http://www.teamsaw.eu)
