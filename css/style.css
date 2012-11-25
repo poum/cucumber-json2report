@@ -99,7 +99,7 @@ h1, h2 {
 .error_message {
 	padding: 25px;
 	background-color: #FFEEEE;
-	border: 2px groove #D88A8A;
+	border: 2px groove #F88A8A;
 }
 
 .comments {
@@ -107,7 +107,6 @@ h1, h2 {
 	margin-right: 20px;
 	padding-left: 20px;
 	font-style: italic;
-	/* background-image: url("../images/icons/comment.png") no-repeat; */
 	background: lightgrey url("../images/icons/comment.png") no-repeat;
 }
 
@@ -180,6 +179,10 @@ ul.steps {
 	background-color: #C5D88A; 
 }
 
+.row_passed:hover {
+	background-color: #C5F88A; 
+}
+
 .step_passed, .scenario_passed, .feature_passed {
 	background: url("../images/icons/tick.png") no-repeat;
 	padding-left: -20px;
@@ -197,6 +200,10 @@ ul.steps {
 	background-color: #EBCC81;
 }
 
+.row_pending:hover {
+	background-color: #ffa912;
+}
+
 .step_pending {
 	background: url("../images/icons/error.png") no-repeat;
 	padding-left: -20px;
@@ -212,7 +219,11 @@ ul.steps {
 }
 
 .row_skipped {
-	background-color: #2DEAEC;
+	background-color: #43B5CD;
+}
+
+.row_skipped:hover {
+	background-color: #32EAEC;
 }
 
 .step_skipped {
@@ -230,7 +241,11 @@ ul.steps {
 }
 
 .row_failed {
-	background-color: #D88A8A;
+	background-color: #F88A8A;
+}
+
+.row_failed:hover {
+	background-color: #fa4f4f;
 }
 
 .step_failed, .scenario_failed, .feature_failed {
