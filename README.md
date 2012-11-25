@@ -18,21 +18,6 @@ Notice: works only with Firefox for the moment, due probably to more restrictive
 
 ## Documentation
 
-### Configuration
-
-cucumber-json2report use, in this order of decreasing precedence:
-
-* url parameter
-	* `src`: the location of the cucmber json file, which could be local
-	* `lang`: the language for the UI
-	* `project`: the name of the tested project to display
-	* `build`: the build number to display
-	* `jenkins`: your jenkins base URL (TODO)
-* config file (TODO)
-* default values
-	* `src`: `data/cucumber.json`
-	* `lang`: the browser default one or `en`
-
 ### Overview
 
 By example, using: `file:///somepath/cucumber-json2report/index.html?lang=fr&src=data/cucumber.json&project=MyProject&build=42`
@@ -81,6 +66,21 @@ In the popup window, you can browse in all the scenario screenshots.
 * dynamic status charts for scenarios and steps, for all features or for a single one
 * pretty feature result listing with status, duration, and comments for features, scenarios, and steps; tags for features and scenarios
 * screenshot navigator
+
+### Configuration
+
+cucumber-json2report use, in this order of decreasing precedence:
+
+* url parameter
+	* `src`: the location of the cucmber json file, which could be local
+	* `lang`: the language for the UI
+	* `project`: the name of the tested project to display
+	* `build`: the build number to display
+	* `jenkins`: your jenkins base URL (TODO)
+* config file (TODO)
+* default values
+	* `src`: `data/cucumber.json`
+	* `lang`: the browser default one or `en`
 
 ### Compatibility
 
