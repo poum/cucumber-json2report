@@ -8,7 +8,7 @@ This report are localized, according to your browser preferences or as specified
 ## For the impatients
 
 1. get cucumber-json2report 
-2. get sencha extjs 4.1.1a on http://www.sencha.com/products/extjs/download/ (dual LGPL and commercial license)
+2. get sencha extjs 4.1.1a on http://www.sencha.com/products/extjs/download/ (dual Gnu GPL v3 and commercial license)
 3. extract it and link it as `extjs` in the `js` sub directory
 4. put your json cucumber report in `data` sub directory (supposing it's name is `cucumber.json`)
 5. open in your browser (only firefox for the moment) the `index.html` file with this url: file:///path/to/cucumber-json2report/index.html
