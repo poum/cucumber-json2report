@@ -70,7 +70,7 @@ Ext.define('CJ2H.model.Scenario', {
 				'<p>',
 					'<span class="keyword scenario_{status}">{keyword}</span>', 
 					'<span class="name">{name}</span>',
-					'<tpl if="duration && duration != 0"><span class="duration">{[ values.duration.toFixed(2) ]}&nbsp;ms</span></tpl>',
+					'<tpl if="duration && duration !== 0"><span class="duration">{[ values.duration.toFixed(2) ]}&nbsp;ms</span></tpl>',
 				'</p>',
 				'<p><span class="description">{description}</span></p>',
 				'<ul class="steps">'+ stepListing + '</ul>',

@@ -30,7 +30,7 @@ Ext.define('CJ2H.data.Page', {
 
 		if (params.menu != null) {
 			params.menu = this.applyMenu(params.menu);
-			if (params.menu != 'Features' && params.menu != 'Tags' && params.menu != 'Feature' && params.menu != 'Tag') {
+			if (params.menu !== 'Features' && params.menu !== 'Tags' && params.menu !== 'Feature' && params.menu !== 'Tag') {
 				this.setMenu('Notfound');
 			}
 			else {
@@ -40,14 +40,14 @@ Ext.define('CJ2H.data.Page', {
 
 		Ext.Array.forEach(['src', 'build', 'project', 'lang'], 
     			function(param) {
-				if (params[param] != null) {
-					if ('src' != param && 'object' == typeof params[param]) {
+				if (params[param] !== null) {
+					if ('src' !== param && 'object' === typeof params[param]) {
 						params[param] = params[param][0];
 						alert('Multiple value for ' + param + ' parameter:' +
                                                       '\n\n\t"'+ params[param] + '" will be used' +
 						      '\n\tother redondant values dropped');
 					}
-					if ('lang' == param) {
+					if ('lang' === param) {
 						params.lang = this.normalizeLang(params.lang);
 					}
 					this[param] = params[param];
@@ -117,7 +117,7 @@ Ext.define('CJ2H.data.Page', {
 				});
 			}
 			catch(e) {
-				if ('default' != lang) {
+				if ('default' !== lang) {
 					console.error('Language "' + lang + '" not available ! I will try another one ...');
 				}
 				else {
@@ -145,7 +145,7 @@ Ext.define('CJ2H.data.Page', {
 		var pageTitle = '';
 		var suffix = '';
 
-		if ("Features" == menu || "Tags" == menu) {
+		if ("Features" === menu || "Tags" === menu) {
 			if (name) {
 				menu += "Named";
 				suffix = ' ' + this.msg['for'+menu] + ' "'+name+'"';

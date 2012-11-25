@@ -74,7 +74,7 @@ Ext.define('CJ2H.model.Feature', {
 			'<p id="featureTitle">',
 				'<span id="featureKeyword" class="feature_{status}">{keyword}:</span>&nbsp;',
 				'<span id="featureName">{name}</span>',
-				'<tpl if="duration && duration != 0"><span class="duration">{[ values.duration.toFixed(2) ]}&nbsp;ms</span></tpl>',
+				'<tpl if="duration && duration !== 0"><span class="duration">{[ values.duration.toFixed(2) ]}&nbsp;ms</span></tpl>',
 			'</p>',
 			'<div class="description">{description}</div>',
 			'<ul id="elements">' + elementListing + '</ul>',

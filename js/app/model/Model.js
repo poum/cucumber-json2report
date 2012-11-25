@@ -14,7 +14,7 @@ Ext.define('CJ2H.model.Model', {
     },
 
     _assertNumber: function(field) {
-	if ('number' != typeof this.get(field)) {
+	if ('number' !== typeof this.get(field)) {
 		throw { error: 'NaNError', message: field + ' or ' + field + 'value is not a number' };
 	}
 

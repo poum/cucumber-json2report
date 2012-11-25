@@ -115,7 +115,7 @@ Ext.define('CJ2H.data.Engine', {
 
 				Ext.Array.forEach(jsonFeature.get('elements'), function(jsonElement) {
 			
-					if ("scenario" == jsonElement.type || "background" == jsonElement.type)	{
+					if ("scenario" === jsonElement.type || "background" === jsonElement.type)	{
 
 						scenario = Ext.create('CJ2H.model.Scenario', {
 							id:          idScenario++,
@@ -167,18 +167,18 @@ Ext.define('CJ2H.data.Engine', {
 									}, this);
 								}
 
-								if ("passed" == step.get('status')) {
+								if ("passed" === step.get('status')) {
 									scenario.inc('stepPassedNumber');
 								}
 								else {
 									scenario.set('status', 'failed');
-									if ("failed" == step.get('status')) {
+									if ("failed" === step.get('status')) {
 										scenario.inc('stepFailedNumber'); 
 									}
-									else if ("skipped" == step.get('status')) {
+									else if ("skipped" === step.get('status')) {
 										scenario.inc('stepSkippedNumber'); 
 									}
-									else if ("pending" == step.get('status')) {
+									else if ("pending" === step.get('status')) {
 										scenario.inc('stepPendingNumber');
 									}
 								};
@@ -200,7 +200,7 @@ Ext.define('CJ2H.data.Engine', {
 
 						feature.inc('scenarioNumber');
 						
-						if ("passed" == scenario.get('status')) {
+						if ("passed" === scenario.get('status')) {
 							feature.inc('scenarioPassedNumber'); 
 						}
 						else {
@@ -219,7 +219,7 @@ Ext.define('CJ2H.data.Engine', {
 
 						Ext.Array.forEach(tags, function(tag) {
 							tag.inc('scenarioNumber');
-							if ("passed" == scenario.get('status')) {
+							if ("passed" === scenario.get('status')) {
 								tag.inc('scenarioPassedNumber');
 							}
 							else {
@@ -248,7 +248,7 @@ Ext.define('CJ2H.data.Engine', {
 
 				Ext.Array.forEach(feature.getTags(), function(tag) {
 					tag.inc('featureNumber');
-					if ("passed" == feature.get('status')) {
+					if ("passed" === feature.get('status')) {
 						tag.inc('featurePassedNumber');
 					}
 					else {
@@ -258,7 +258,7 @@ Ext.define('CJ2H.data.Engine', {
 				});
 		}, this);
 
-		if (this.page.menu == 'Features') {
+		if (this.page.menu === 'Features') {
 			this.app.getController('Features').loadPies();
 			// hack to have grid summmary refreshed in order to display correct information
 			this.app.getController('Features').refreshGridSummary();

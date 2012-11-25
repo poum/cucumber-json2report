@@ -197,8 +197,8 @@ Ext.define('CJ2H.controller.Features', {
 
     saveChart: function(button) {
 
-	if ("cancel" != button) {
-		var graphique = ("yes" == button) ? this.getStepChart() : this.getScenarioChart();
+	if ("cancel" !== button) {
+		var graphique = ("yes" === button) ? this.getStepChart() : this.getScenarioChart();
 		// works only on Internet. TODO: error handling
 		graphique.save({type: 'image/png'});
 	}

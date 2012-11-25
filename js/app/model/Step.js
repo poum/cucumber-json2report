@@ -35,7 +35,7 @@ Ext.define('CJ2H.model.Step', {
 			'<p>',
 				'<span class="keyword stepKeyword step_{status}">{keyword}</span>',
 				'<span class="name">{name}</span>',
-				'<tpl if="duration && duration != 0"><span class="duration stepDuration">{[ values.duration.toFixed(2) ]}&nbsp;ms</span></tpl>',
+				'<tpl if="duration && duration !== 0"><span class="duration stepDuration">{[ values.duration.toFixed(2) ]}&nbsp;ms</span></tpl>',
 				'<span class="embeddings" data="{id}">', embeddingNumber, '</span>',
 			'</p>',
 			'<tpl if="error_message"><div class="error_message"><pre>{error_message}</pre></div></tpl>',		
