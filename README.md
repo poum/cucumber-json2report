@@ -7,12 +7,10 @@ This report are localized, according to your browser preferences or as specified
 
 ## For the impatients
 
-1. get cucumber-json2report 
-2. get sencha extjs 4.1.1a on http://www.sencha.com/products/extjs/download/ (dual Gnu GPL v3 and commercial license)
-3. extract it and link it as `extjs` in the `js` sub directory
-4. put your json cucumber report in `data` sub directory (supposing it's name is `cucumber.json`)
-5. open in your browser (only firefox for the moment) the `index.html` file with this url: file:///path/to/cucumber-json2report/index.html
-6. play around and enjoy
+1. get cucumber-json2report zip and unzip it anywhere
+2. optionnally, put your json cucumber report in `data` sub directory (supposing it's name is `cucumber.json`)
+3. open in your browser (only firefox for the moment) the `quickstart.html` file with this url: file:///path/to/cucumber-json2report/quickstart.html
+4. play around and enjoy
 
 Notice: works only with Firefox for the moment, due probably to more restrictive security policy in other browser (XHR).
 
@@ -66,6 +64,13 @@ In the popup window, you can browse in all the scenario screenshots.
 * dynamic status charts for scenarios and steps, for all features or for a single one
 * pretty feature result listing with status, duration, and comments for features, scenarios, and steps; tags for features and scenarios
 * screenshot navigator
+
+### Local install
+
+If you nedd /want use a local installation of ExtJS (on local network by example), tou have to:
+1. get sencha extjs 4.1.1a on http://www.sencha.com/products/extjs/download/ (dual Gnu GPL v3 and commercial license)
+2. extract it and link it as `extjs` in the `js` sub directory
+3. use `index.html` instead of `quickstart.html`.
 
 ### Configuration
 
