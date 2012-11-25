@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+Copyright 2012 Philippe Poumaroux
+
+This file is part of cucumber-json2report.
+
+cucumber-json2report is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cucumber HTML Report</title>
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="http://dev.sencha.com/deploy/ext-4.1.0-gpl/resources/css/ext-all.css" media="screen" rel="stylesheet" />
+    <link href="css/style.css" media="screen" rel="stylesheet" />
+    <script src="http://dev.sencha.com/deploy/ext-4.1.0-gpl/ext-all.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <div id="menus">
+	<a id="logo" href="/"><span id="project">Cucumber</span><br/><span id="build"></span></a>
+	<div id="toolbar"></div>
+    </div>
+
+    <div id="content">
+
+	<h1 id="pageTitle"></h1>
+
+	<div id="graph"></div>
+
+	<div id="grid">
+		<h2 id="gridTitle"></h2>
+		<div id="gridPanel"></div>
+	</div>
+
+	<div id="listing"></div>
+    </div>
+
+   <div id="footer"></div>
+  </body>
+</html>
