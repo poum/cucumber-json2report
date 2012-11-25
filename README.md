@@ -16,27 +16,6 @@ This report are localized, according to your browser preferences or as specified
 
 Notice: works only with Firefox for the moment, due probably to more restrictive security policy in other browser (XHR).
 
-## Copyright
-
-Copyright 2012 Philippe Poumaroux
-
-## License
-
-This file is part of cucumber-json2report.
-
-cucumber-json2report is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 ## Documentation
 
 ### Configuration
@@ -185,6 +164,27 @@ for this documentation and the locale/default.js (aka en.js) file.
 Mein Deutsch ist schrecklich, ich habe nicht locale/de.js schreiben versuchen.
 
 You're welcome to propose any other localization.
+
+## Copyright
+
+Copyright 2012 Philippe Poumaroux
+
+## License
+
+This file is part of cucumber-json2report.
+
+cucumber-json2report is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ## Credits & links
 
