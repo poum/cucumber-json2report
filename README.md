@@ -67,7 +67,8 @@ In the popup window, you can browse in all the scenario screenshots.
 
 ### Local install
 
-If you nedd /want use a local installation of ExtJS (on local network by example), tou have to:
+If you need /want use a local installation of ExtJS (on local network by example), you have to:
+
 1. get sencha extjs 4.1.1a on http://www.sencha.com/products/extjs/download/ (dual Gnu GPL v3 and commercial license)
 2. extract it and link it as `extjs` in the `js` sub directory
 3. use `index.html` instead of `quickstart.html`.
