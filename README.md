@@ -5,16 +5,16 @@ Introduction
 ------------
 
 cucumber-json2report produces dynamically and locally graphical reports for your cucumber-jvm tests.
-This report are localized, according to your browser preferences or as specified with the 'lang' parameter.
+This report are localized, according to your browser preferences or as specified with the `lang` parameter.
 
 For the impatients
 ------------------
 
-1. get sencha extjs 4.1.1a on www.sencha.com (dual LGPL and commercial license)
+1. get sencha extjs 4.1.1a on http://www.sencha.com/products/extjs/download/ (dual LGPL and commercial license)
 2. extract it and link it as extjs in the js directory
 3. get cucumber-json2report 
 4. put your json cucumber report in data sub directory (supposing it's name is `cucumber.json`)
-5. open in your browser (only firefox for the moment) the index.html file with this url: file:///path/to/cucmber-json2report/index.html?src=data/cucumber.json
+5. open in your browser (only firefox for the moment) the `index.html` file with this url: file:///path/to/cucmber-json2report/index.html?src=data/cucumber.json
 6. play around and enjoy
 
 Notice: works only with Firefox for the moment, due probably to more restrictive security policy (XHR).
@@ -48,23 +48,23 @@ Documentation
 cucumber-json2report use, in this order of decreasing precedence:
 
 * url parameter
-	* src: the location of the cucmber json file, which could be local
-	* lang: the language for the UI
-	* project: the name of the tested project to display
-	* build: the build number to display
-	* jenkins: your jenkins base URL
+	* `src`: the location of the cucmber json file, which could be local
+	* `lang`: the language for the UI
+	* `project`: the name of the tested project to display
+	* `build`: the build number to display
+	* `jenkins`: your jenkins base URL (TODO)
 * config file (TODO)
 * default values
-	* src: data/cucumber.json
-	* lang: the browser default one or 'en'
+	* `src`: `data/cucumber.json`
+	* `lang`: the browser default one or `en`
 
-By example, using: file:///somepath/cucumber-json2report/index.html?lang=fr&src=data/cucumber.json&project=MyProject&build=42
+By example, using: `file:///somepath/cucumber-json2report/index.html?lang=fr&src=data/cucumber.json&project=MyProject&build=42`
 a feature overwiew screen will be pretty quickly displayed:
 
 ![feature overview](https://github.com/poum/cucumber-json2report/raw/master/docs/images/features-overview.png "Feature overview")
 
 Notice how the build and project parameters modify the page title, the page header and title in the document.
-Thanks to default values, file:///somepath/cucumber-json2report/index.html will display the same information,
+Thanks to default values, `file:///somepath/cucumber-json2report/index.html` will display the same information,
 without project and build reference.
 
 If you're french, you could use `lang=fr` (or `lang=fr_FR` or nothing at all because your browser is probably already
@@ -102,7 +102,7 @@ In the popup window, you can browse in all the scenario screenshots.
 Features
 --------
 
-* fully localization (english and french for now)
+* fully localization (english and french for now, help needed for adding others)
 * dynamic status charts for scenarios and steps, for all features or for a single one
 * pretty feature result listing with status, duration, and comments for features, scenarios, and steps; tags for features and scenarios
 * screenshot navigator
@@ -110,15 +110,7 @@ Features
 Compatibility
 -------------
 
-For now, cucumber-json2report was successfully tested only on Firefox/Linux.
-
-OS             Linux 32        Linux 64    Windows XP    Windows Vista   Windows 7   Windows 8
-flavour     (Ubuntu 12.04)
-Firefox  15     ok
-	 16     ok
-	 17     ok
-Chromium 20     failed
-IE
+For now, cucumber-json2report was successfully tested only on Firefox (Linux Ubuntu 12.04 32bits & Windows Seven Pro).
 
 Feel free to send feedback for other configurations.
 
@@ -130,7 +122,7 @@ I've looked for a way to export the results, especially for the stake holders wh
 to write (make write) the feature files.
 
 First, we have cucumber-js, but:
-* it'not really pretty
+* it'not really pretty (my only opinion)
 * all the data are put together
 * it's not localized
 * it need the html format to be activated during tests
@@ -174,8 +166,9 @@ See the TODO file in this distribution.
 Propose your own !
 
 The next improvement will be:
-- a tag page as the cucmber-reporting one
+- a tag page as the cucmber-reporting one (almost finished)
 - a config file
+- compatibility with other major browsers
 
 Bugs ?
 ------
@@ -193,7 +186,7 @@ Fell free to propose a fix ;-)
 Help wanted
 -----------
 
-As you have certainly noticed, I'm not an english native speaker. Fell free to suggest any improvement
+As you have certainly noticed, I'm not an english native speaker. Feel free to suggest any improvement
 for this documentation and the locale/default.js (aka en.js) file.
 
 Mein Deutsch ist schrecklich, ich habe nicht locale/de.js schreiben versuchen.
@@ -203,15 +196,23 @@ You're welcome to propose any other localization.
 Credits & links
 ---------------
 
-* the excellent cucumber-jvm
-* cucumber-reporting & thucydides for the inspiration
+* aslak hellesoy for the excellent cucumber-jvm (please, fix the JSON output, I need results in every step)
+  https://github.com/cucumber/cucumber-jvm
+* Kingsley Hendrickse for cucumber-reporting, for the inspiration
+  https://github.com/masterthought/cucumber-reporting
+* thucydides for additionnal ideas
+  https://github.com/thucydides-webtests/thucydides
+* Sencha for the excellent ExtJS javascript framework 
+  http://www.sencha.com
+* Douglas Crockford for his Javascript book and JSLint
+  https://github.com/douglascrockford/JSLint
 
 Contact
 -------
 
-poum <at> cpan.org
+poum `<at>` cpan.org
 
-See also by blog at http://philippe.poumaroux.free.fr
+See also by blog (in french) at http://philippe.poumaroux.free.fr
 
 Need a pause ?
 --------------
