@@ -35,8 +35,19 @@ Ext.define('CJ2H.view.Features.Window', {
 			xtype: 'treecolumn',
 			region: 'west',
 			width: 200,
+			store: Ext.getStore('EmbeddingTree'),
 			collapsible: true,
 			collapsed: false,
+			headers: [{
+				xtype: 'treecolumn',
+				text:  'Etape',
+				dataIndex: 'name',
+				flex: 3,
+			},{
+				text: 'duration',
+				dataIndex: 'duration',
+				flex: 1,
+			}]
 		}];
 
 		this.bbar = [

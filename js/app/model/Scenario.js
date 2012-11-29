@@ -51,7 +51,7 @@ Ext.define('CJ2H.model.Scenario', {
 	var tags = new Array();
 	var tagStore = Ext.getStore('Tags');
 	Ext.Array.forEach(this.getTagIds(), function(tagId) {
-		tags.push(tagStore.findRecord('id', tagId));
+		tags.push(tagStore.findRecord('id', tagId, 0, false, true, true));
 	});
 
 	return tags;

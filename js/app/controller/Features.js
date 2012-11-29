@@ -175,7 +175,8 @@ Ext.define('CJ2H.controller.Features', {
 	store.filter('step', button.data);
 	src = store.getAt(0).getSrc();
 	store.clearFilter();
-	step = Ext.getStore('Steps').findRecord('id', button.data);
+	// need exact match (last 'true')
+	step = Ext.getStore('Steps').findRecord('id', button.data, 0, false, false, true);
 
 	if (! this.getViewWin()) {
 		this.setViewWin(Ext.create('CJ2H.view.Features.Window', { 
