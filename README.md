@@ -141,16 +141,51 @@ I've started to work on it at the beginning of november 2012.
 
 ### Todo
 
-See the TODO file in this distribution.
-Propose your own !
-
 The next improvement will be:
 * a screenshot browser window
-* a tag page as the cucmber-reporting one (almost finished)
+* a tag page as the cucumber-reporting one (almost finished) and link from one to the other
+* a menu (Extjs + controller)
+* a about menu
+* jenkins link (a plugin also)
 * a config file
-* compatibility with other major browsers
+* compatibility with other major browsers (Chrome, IE, Konqueror, Epiphany, Opera & Safari)
+* functionnal tests (with cucumber-jvm of course)
+* ajax mode
+* fix BOM iframe warning
+* add a duration pie chart
+* add a prod compressed version
+* use sass/compass to reduce css complexity
+* help menu
+* add icon to the grid
+* fix logo link
+* add validation to models
+* fix chart tooltip size
+* add loading error alert
+* fix gender and number for step, scenario, feature vs failed, passed, skipped, pending
+* save tag chart
+* display tag listing
+* space beetween feature charts
+* increase name size in grid and put description in a tooltip
+* add tag link from listing
+* add en and fr doc
+* put chart colorSet in config / page
+* handle lower/uppercase parameters
+* see how save chart without Internet
 
-### Bugs ?
+### ... Maybe ?
+
+* reverse tag chart orientation
+* loading indicator
+* history page
+* multi src
+* french: étiquetter ou marqueur ?
+* skippedFailed option
+* artifactEnabled option
+* undefinedFailed option
+* use feature lang for page
+
+
+## Bugs ?
 
 If you think you have detected a bug:
 
