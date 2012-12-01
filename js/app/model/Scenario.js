@@ -40,7 +40,7 @@ Ext.define('CJ2H.model.Scenario', {
 
     getTagIds: function() {
 	var linkStore = Ext.getStore('TagFeatureScenarioLinks');
-	linkStore.filter('scenario', this.get('id'));
+	linkStore.filter([{ property: 'scenario', value: this.get('id'), exactMatch: true }]);
 	var tagIds = linkStore.collect('tag');
 	linkStore.clearFilter();
 
@@ -60,7 +60,7 @@ Ext.define('CJ2H.model.Scenario', {
     getListing: function() {
 
 	var comments = Ext.getStore('Comments');
-	comments.filter('scenario', this.get('id'));
+	comments.filter([{ property: 'scenario', value: this.get('id'), exactMatch: true }]);
 	var commentListing = '';
 	comments.each(function(comment) {
 		commentListing += comment.getListing();
@@ -74,7 +74,7 @@ Ext.define('CJ2H.model.Scenario', {
 	});
 
 	var steps = Ext.getStore('Steps');
-	steps.filter('scenario', this.get('id'));
+	steps.filter([{ property: 'scenario', value: this.get('id'), exactMatch: true }]);
 	var stepListing = '';
 	steps.each(function(step) {
 		stepListing += step.getListing();

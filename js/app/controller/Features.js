@@ -125,7 +125,7 @@ Ext.define('CJ2H.controller.Features', {
 	}
 	else {
 		//assert: called only from grid (record needed)
-		store.filter("id", record.getId());
+		store.filter([{ property: "id", value: record.getId(), exactMatch: true }]);
 		this.getPage().setTitles('Features', record.get('name'));
 	 	this.getBtnAllFeatures().enable();
 		this.displayFeatureListing(record);
@@ -172,7 +172,7 @@ Ext.define('CJ2H.controller.Features', {
     viewEmbedding: function(button) {
 
 	var store = Ext.getStore('Embeddings');
-	store.filter('step', button.data);
+	store.filter([{ property: 'step', value: button.data, exactMatch: true }]);
 	src = store.getAt(0).getSrc();
 	store.clearFilter();
 	// need exact match (last 'true')

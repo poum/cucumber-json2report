@@ -101,7 +101,7 @@ Ext.define('CJ2H.controller.Tags', {
 	}
 	else {
 		//assert: called only from grid (record needed)
-		store.filter("id", record.getId());
+		store.filter([{ property: "id", value: record.getId(), exactMatch: true }]);
 		this.getPage().setTitles('Tags', record.get('name'));
 	 	this.getBtnAllTags().enable();
 		//this.displayTagListing(record);

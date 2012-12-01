@@ -34,7 +34,7 @@ Ext.define('CJ2H.model.Step', {
 
     getListing: function() {
 	var comments = Ext.getStore('Comments');
-	comments.filter('step', this.get('id'));
+	comments.filter([{ property: 'step', value: this.get('id'), exactMatch: true}]);
 	var commentListing = '';
 	comments.each(function(comment) {
 		commentListing += comment.getListing();
@@ -42,7 +42,7 @@ Ext.define('CJ2H.model.Step', {
 	comments.clearFilter();
 
 	var embeddings = Ext.getStore('Embeddings');
-	embeddings.filter('step', this.get('id'));
+	embeddings.filter([{ property: 'step', value: this.get('id'), exactMatch: true }]);
 	var embeddingListing = '';
 	var embeddingNumber = embeddings.count() || '';
 	embeddings.clearFilter();
