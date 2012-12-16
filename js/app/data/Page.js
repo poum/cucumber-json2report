@@ -34,6 +34,24 @@ Ext.define('CJ2H.data.Page', {
 	constructor: function(config) {
 		this.initConfig(config);
 
+		/*
+		Ext.Loader.loadScript({
+			url: 'config.json',
+			onLoad: this.setConfigParameters,
+			onError: this.setParameters,
+			scope: this
+		});
+		*/
+
+		this.setParameters();
+	},
+
+	setConfigParameters: function() {
+		this.setParameters();
+	},
+
+	setParameters: function() {
+
 		var params = Ext.Object.fromQueryString(window.location.search);
 
 		// param names to lower case

@@ -16,23 +16,11 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-Ext.define('CJ2H.model.Embedding', {
-  extend: 'Ext.data.Model',
+Ext.define('CJ2H.store.ScenarioTree', {
+    extend: 'Ext.data.TreeStore',
 
-  fields: [
-    { name: 'id' },
-    { name: 'step' },
-    { name: 'data', type: 'string' },
-    { name: 'mime_type', type: 'string', defaultValue: 'image/png' }
-  ],
+    autoLoad: false,
 
-  getSrc: function() {
-    return Ext.String.format('data:{0};base64,{1}', this.get('mime_type'), this.get('data'));
-  },
-
-  attach: function(parentNode, text) {
-    var embedNode = parentNode.appendChild({ iconCls: 'screenshotIcon', leaf: true });
-    embedNode.set('text', text);
-    embedNode.set('embedId', this.get('id'));
-  }
+    model: 'CJ2H.model.ScenarioTree',
 });
+

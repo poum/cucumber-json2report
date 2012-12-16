@@ -189,7 +189,7 @@ ul.steps {
 }
 
 .window_passed {
-	background: url("../images/icons/tick.png") no-repeat;
+	background: url("../images/icons/tick.png") no-repeat !important;
 }
 
 .pending {
@@ -210,7 +210,7 @@ ul.steps {
 }
 
 .window_pending {
-	background: url("../images/icons/error.png") no-repeat;
+	background: url("../images/icons/error.png") no-repeat !important;
 }
 
 .skipped {
@@ -232,7 +232,7 @@ ul.steps {
 }
 
 .window_skipped {
-	background: url("../images/icons/control_pause_blue.png") no-repeat;
+	background: url("../images/icons/control_pause_blue.png") no-repeat !important;
 }
 
 .failed {
@@ -254,7 +254,7 @@ ul.steps {
 }
 
 .window_failed {
-	background: url("../images/icons/exclamation.png") no-repeat;
+	background: url("../images/icons/exclamation.png") no-repeat !important;
 }
 
 .allFeatures, .allTags {

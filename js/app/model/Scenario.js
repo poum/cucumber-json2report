@@ -17,84 +17,107 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 Ext.define('CJ2H.model.Scenario', {
-    extend: 'CJ2H.model.Model',
-    fields: [
-        { name: 'id' },
-	{ name: 'keyword', type: 'string' },
-	{ name: 'feature' },
-	{ name: 'name', type: 'string' },
-	{ name: 'description', type: 'string',
-	  convert: function(v, record) {
-		return v.replace(/\n/g, '<br>');
-	  }
-	},
-	{ name: 'tags', type: 'int' },
-	{ name: 'stepNumber', type: 'int', defaultValue: 0 },
-	{ name: 'stepPassedNumber', type: 'int', defaultValue: 0 },
-	{ name: 'stepFailedNumber', type: 'int', defaultValue: 0 },
-	{ name: 'stepSkippedNumber', type: 'int', defaultValue: 0 },
-	{ name: 'stepPendingNumber', type: 'int', defaultValue: 0 },
-	{ name: 'duration', type: 'float', defaultValue: 0 },
-	{ name: 'status', type: 'string', defaultValue: 'passed' },
-    ],
+  extend: 'CJ2H.model.Model',
 
-    getTagIds: function() {
-	var linkStore = Ext.getStore('TagFeatureScenarioLinks');
-	linkStore.filter([{ property: 'scenario', value: this.get('id'), exactMatch: true }]);
-	var tagIds = linkStore.collect('tag');
-	linkStore.clearFilter();
-
-	return tagIds;
+  fields: [
+    { name: 'id' },
+    { name: 'keyword', type: 'string' },
+    { name: 'feature' },
+    { name: 'name', type: 'string' },
+    { name: 'description', type: 'string',
+      convert: function(v, record) {
+        return v.replace(/\n/g, '<br>');
+      }
     },
+    { name: 'tags', type: 'int' },
+    { name: 'stepNumber', type: 'int', defaultValue: 0 },
+    { name: 'stepPassedNumber', type: 'int', defaultValue: 0 },
+    { name: 'stepFailedNumber', type: 'int', defaultValue: 0 },
+    { name: 'stepSkippedNumber', type: 'int', defaultValue: 0 },
+    { name: 'stepPendingNumber', type: 'int', defaultValue: 0 },
+    { name: 'duration', type: 'float', defaultValue: 0 },
+    { name: 'status', type: 'string', defaultValue: 'passed' },
+  ],
 
-    getTags: function() {
-	var tags = new Array();
-	var tagStore = Ext.getStore('Tags');
-	Ext.Array.forEach(this.getTagIds(), function(tagId) {
-		tags.push(tagStore.findRecord('id', tagId, 0, false, true, true));
-	});
+  getTagIds: function() {
+    var linkStore = Ext.getStore('TagFeatureScenarioLinks');
+    linkStore.filter([{ property: 'scenario', value: this.get('id'), exactMatch: true }]);
+    var tagIds = linkStore.collect('tag');
+    linkStore.clearFilter();
 
-	return tags;
-    },
+    return tagIds;
+  },
 
-    getListing: function() {
+  getTags: function() {
+    var tags = new Array();
+    var tagStore = Ext.getStore('Tags');
+    Ext.Array.forEach(this.getTagIds(), function(tagId) {
+      tags.push(tagStore.findRecord('id', tagId, 0, false, true, true));
+    });
 
-	var comments = Ext.getStore('Comments');
-	comments.filter([{ property: 'scenario', value: this.get('id'), exactMatch: true }]);
-	var commentListing = '';
-	comments.each(function(comment) {
-		commentListing += comment.getListing();
-	});
-	comments.clearFilter();
+    return tags;
+  },
 
-	var tags = this.getTags();
-	var tagListing = '';
-	Ext.Array.forEach(tags, function(tag) {
-		tagListing += tag.getListing();
-	});
+  getListing: function() {
+    var comments = Ext.getStore('Comments');
+    comments.filter([{ property: 'scenario', value: this.get('id'), exactMatch: true }]);
+    var commentListing = '';
+    comments.each(function(comment) {
+      commentListing += comment.getListing();
+    });
+    comments.clearFilter();
 
-	var steps = Ext.getStore('Steps');
-	steps.filter([{ property: 'scenario', value: this.get('id'), exactMatch: true }]);
-	var stepListing = '';
-	steps.each(function(step) {
-		stepListing += step.getListing();
-	});
-	steps.clearFilter();
+    var tags = this.getTags();
+    var tagListing = '';
+    Ext.Array.forEach(tags, function(tag) {
+      tagListing += tag.getListing();
+    });
 
-	var tpl = new Ext.XTemplate(
-			'<li class="row_{status}">',
-				'<ul class="comments">' + commentListing + '</ul>',
-				'<ul class="tags">' + tagListing + '</ul>',
-				'<p>',
-					'<span class="keyword scenario_{status}">{keyword}</span>', 
-					'<span class="name">{name}</span>',
-					'<tpl if="duration && duration !== 0"><span class="duration">{[ values.duration.toFixed(2) ]}&nbsp;ms</span></tpl>',
-				'</p>',
-				'<p><span class="description">{description}</span></p>',
-				'<ul class="steps">'+ stepListing + '</ul>',
-			'</li>'
-	);
+    var steps = Ext.getStore('Steps');
+    steps.filter([{ property: 'scenario', value: this.get('id'), exactMatch: true }]);
+    var stepListing = '';
+    steps.each(function(step) {
+      stepListing += step.getListing();
+    });
+    steps.clearFilter();
 
-	return tpl.apply(this.getData());
-    }
+    var tpl = new Ext.XTemplate(
+      '<li class="row_{status}">',
+      '<ul class="comments">' + commentListing + '</ul>',
+      '<ul class="tags">' + tagListing + '</ul>',
+      '<p>',
+      '<span class="keyword scenario_{status}">{keyword}</span>', 
+      '<span class="name">{name}</span>',
+      '<tpl if="duration && duration !== 0"><span class="duration">{[ values.duration.toFixed(2) ]}&nbsp;ms</span></tpl>',
+      '</p>',
+      '<p><span class="description">{description}</span></p>',
+      '<ul class="steps">'+ stepListing + '</ul>',
+      '</li>'
+    );
+
+    return tpl.apply(this.getData());
+  },
+
+  attach: function(parentNode) {
+
+    var scenarioNode = {
+      iconCls:  'window_' + this.get('status'),
+      expanded: true,
+      leaf:     false
+    };
+
+    scenarioNode = parentNode.appendChild(scenarioNode);
+    scenarioNode.set('text', this.get('name'));
+    scenarioNode.set('duration', this.get('duration'));
+    scenarioNode.set('status', this.get('status'));
+
+
+    var steps = Ext.getStore('Steps');
+    steps.filter([{ property: 'scenario', value: this.get('id'), exactMatch: true }]);
+    var children = [];
+    steps.each(function(step) {
+     step.attach(scenarioNode);
+    });
+    steps.clearFilter();
+  }
 });

@@ -17,49 +17,57 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 Ext.define('CJ2H.view.Features.Window', {
-	extend: 'Ext.window.Window',
-	alias: 'widget.FeatureEmbeddingWindow',
-	height: 500,
-	width: 600,
-	closeAction: 'hide',
-	maximizable: true,
-	layout: 'border',
+  extend: 'Ext.window.Window',
+  alias: 'widget.FeatureEmbeddingWindow',
+  height: 500,
+  width: 600,
+  closeAction: 'hide',
+  maximizable: true,
+  layout: 'border',
 
-	initComponent: function() {
+  initComponent: function() {
 
-		this.items = [{  
-			xtype: 'image',
-			region: 'center',
-			src: this.config.src,
-			},{
-			xtype: 'treecolumn',
-			region: 'west',
-			width: 200,
-			store: Ext.getStore('EmbeddingTree'),
-			collapsible: true,
-			collapsed: false,
-			headers: [{
-				xtype: 'treecolumn',
-				text:  'Etape',
-				dataIndex: 'name',
-				flex: 3,
-			},{
-				text: 'duration',
-				dataIndex: 'duration',
-				flex: 1,
-			}]
-		}];
+    var msg = this.config.msg;
 
-		this.bbar = [
-			'->',
-			{ xtype: 'button', text: '|<' },
-			{ xtype: 'button', text: '<', action: 'previous' },
-			{ xtype: 'button', text: '||' },
-			{ xtype: 'button', text: '>', action: 'next' },
-			{ xtype: 'button', text: '>|' }
-		];
+    this.items = [{  
+      xtype: 'image',
+      region: 'center',
+      src: this.config.src,
+    },{
+      xtype: 'treepanel',
+      region: 'west',
+      width: 250,
+      height: 500,
+      store: 'ScenarioTree',
+      rootVisible: false,
+      collapsible: true,
+      collapsed: false,
+      viewConfig: {
+        markDirty: false
+      },
+      columns: [{
+        xtype: 'treecolumn',
+        text:  msg.step,
+        dataIndex: 'text',
+        flex: 3,
+      },{
+        text: msg.duration,
+        dataIndex: 'duration',
+        flex: 1,
+      }]
+    }];
 
-	this.callParent(arguments);
+    /*
+    this.bbar = [
+      '->',
+      { xtype: 'button', text: '|<' },
+      { xtype: 'button', text: '<', action: 'previous' },
+      { xtype: 'button', text: '||' },
+      { xtype: 'button', text: '>', action: 'next' },
+      { xtype: 'button', text: '>|' }
+    ];
+    */
 
-    }
+    this.callParent(arguments);
+  }
 });
