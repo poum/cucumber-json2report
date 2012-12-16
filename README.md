@@ -58,6 +58,12 @@ You can access to screenshots (if any) by clicking on the 'image' buttons. The n
 the number of screenshots available for a speficic step.
 In the popup window, you can browse in all the scenario screenshots.
 
+![Embedding navigator](https://github.com/poum/cucumber-json2report/raw/master/docs/images/embedding-navigator.png "Embedding Navigator")
+
+Click to any embedding of any step to change the image.
+Click to the '<<' button to hide the navigator and to '>>' to restore it.
+You can also maximize, hide or resize the window with the usal way. This settings will be keeped when hiding the window.
+
 ### Features
 
 * fully localization (english and french for now, help needed for adding others)
@@ -142,7 +148,8 @@ I've started to work on it at the beginning of november 2012.
 ### Todo
 
 The next improvement will be:
-* a screenshot browser window
+* play, back forward button for screenshot browser window
+* format duration in screenshot browser window
 * a tag page as the cucumber-reporting one (almost finished) and link from one to the other
 * a menu (Extjs + controller)
 * a about menu
